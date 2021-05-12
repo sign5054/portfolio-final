@@ -1,32 +1,104 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+<div class="app">
+  <v-app>
+     <v-parallax
+    dark
+    height="3000px"
+    
+  >  
+   
+       <v-app-bar
+      app
+      height="120"
+      color="#ffffff"
+      light
+      hide-on-scroll
+      
+      
+    >
+
+      <v-spacer></v-spacer>
+
+
+        <div class="d-flex align-center">
+       
+
+        <v-img
+          alt="Vuetify Name"
+          
+          contain
+          min-width="300"
+          src="https://i.ibb.co/Qb7GnPq/logo.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+
+       <template v-slot:extension>
+        <v-tabs 
+        align-with-title 
+        color="grey lighten-2"
+        >
+          <v-spacer></v-spacer>
+          <v-tab>
+            <router-link to="/Home" > <h3>FORSIDE</h3> </router-link>
+          </v-tab>
+          <v-spacer></v-spacer>
+          
+           <v-tab>
+            <router-link to="/portfolio" > <h3>PORTFOLIO</h3> </router-link>
+          </v-tab>
+         
+          <v-spacer></v-spacer>
+          
+           <v-tab>
+            <router-link to="/Kontakt" > <h3>OM</h3> </router-link>
+          </v-tab>
+          
+          <v-spacer></v-spacer>
+        </v-tabs>
+      </template>
+      
+    </v-app-bar>
+  
+     <v-main>
+      
+
+    <router-view />
+    </v-main>
+</v-parallax>
+  </v-app>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+h1, h2, h3, p{
+  font-family: sweet-sans-pro,sans-serif;
+  font-weight: 300;
+  color: black;
 }
 
-#nav {
-  padding: 30px;
+a{
+  text-decoration:none;
+  font-family: sweet-sans-pro,sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: black;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.app{
+  margin-top: 40px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+
+
+
 </style>
+
+<script>
+ 
+
+
+</script>
