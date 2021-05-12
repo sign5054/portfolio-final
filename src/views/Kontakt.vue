@@ -92,7 +92,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-image: url("../assets/marble.jpg");
-  background-repeat: repeat-y;
+  background-repeat: repeat;
+  background-color: none;
 }
 
 
